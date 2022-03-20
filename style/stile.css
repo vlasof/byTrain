@@ -1,9 +1,10 @@
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
+.table {
+	width: 100px;
 }
 
-th, td{
-    padding: 10px 20px;
-    border: 1px solid rgb(196, 18, 18);
+.table td {
+	border: 1px solid #ff0000;
+    text-align: center;
+    width: 100px;
+    height: 100px;
 }
