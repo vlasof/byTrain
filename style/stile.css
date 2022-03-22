@@ -11,9 +11,8 @@ body {
 }
 .container {
     padding: 3%;
-    width: 75%;
-    height: 75%;
-    max-height: 900px;
+    width: 90%;
+    height: 90%;
     border: 2px solid #10c4d1;
     margin: 0 auto;
 }
@@ -22,12 +21,14 @@ body {
     margin: 0 auto;
     border-collapse: collapse;
     border-spacing: 5px;
-    width: 90%;
-    height: 90%;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .table td {
 	border: 1px solid #10c4d1;
     text-align: center;
     background-color: rgb(112, 0, 139);
+    width: auto;
 }

@@ -44,7 +44,7 @@ for (let c = 0; c < colomn; c++){
         row_child.id = `line${c}${l}`;
         //row_child.innerHTML = c + l;
         row_child.onclick = kaif; // по нажатию вызывается функция
-        row_child.style.cssText = `width: ${myCord}%; heidth: $${myCord}%`;
+        row_child.style.cssText = `width: ${myCord(colomn) * 6}px; height: ${myCord(colomn) * 6}px;`
         row.appendChild(row_child); // связывание столбца со строкой
     }
     tbody.appendChild(row); // связывание тега table со столбцок который выше привязали строки 
