@@ -19,14 +19,13 @@ body {
 
 .table {
     margin: 0 auto;
-    width: 90%;
-    height: 90%;
+    border-collapse: collapse;
+    border-spacing: 5px;
 }
 
 .table td {
 	border: 1px solid #10c4d1;
     text-align: center;
     width: 25px;
-    height: 25px;
     background-color: rgb(112, 0, 139);
 }

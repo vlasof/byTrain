@@ -29,7 +29,7 @@ for (let c = 0; c < colomn; c++){
         // создание td (строчек таблицы), добавление к ним id и текста через innerHTML
         let row_child = document.createElement('td');
         row_child.id = `line${c}${l}`;
-        row_child.innerHTML = c + l;
+        //row_child.innerHTML = c + l;
         row_child.onclick = kaif; // по нажатию вызывается функция
         row.appendChild(row_child); // связывание столбца со строкой
     }
