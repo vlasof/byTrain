@@ -29,6 +29,12 @@ table.appendChild(tbody);
 document.getElementById('cont').appendChild(table);
 
 let colomn = check();
+if (colomn == 0) {
+    colomn = 2;
+}
+if (colomn > 50) {
+    colomn = 50;
+}
 let countY = 0;
 let countX = 0;
 
