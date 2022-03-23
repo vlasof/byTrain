@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stile.css">
     <title>bombMen</title>
 </head>
@@ -8,14 +11,16 @@
     <div class="maindiv">
         <div class="box">
             <div class="timerule">
-                
+                <div class="orange">
+                    <a class="timer" id="timer">00:00:00</a>
+                </div>
             </div>
             <div class="firstcontainer">
                 <button class="button">
                     hellow
                 </button>
-                <button class="button">
-                    hellow
+                <button class="button" id="timerstart">
+                    timer
                 </button>
                 <button class="button">
                     hellow
@@ -35,6 +40,7 @@
         </div>
         <div class="container"  id="cont">
             <script src="../src/script.js"></script>
+            <script src="../src/timer.js"></script>
         </div>
     </div>
 </body>

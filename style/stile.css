@@ -46,6 +46,26 @@ body {
     margin: 5% auto;
 }
 
+.orange {
+    padding: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: auto;
+    height: auto;
+    background-color: black;
+    border-radius: 15px;
+    border: 1px solid #ffa200;
+    text-align: center;
+}
+
+.timer {
+    width: auto;
+    height: auto;
+    font-size: 2vw;
+    color: #ffa200;
+    font-family: 'Red Hat Mono', monospace;
+}
+
 .firstcontainer {
     border: 2px solid var(--borderocean);
     width: 50%;

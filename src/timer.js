@@ -26,6 +26,6 @@ let timer = () => {
             second = 0;
             minut = 0;
         }
-        timertext.innerHTML = `${minut}:${second}:${milsecond}`
-    }, 10000)
+        timertext.innerHTML = `${minut}:${second}:${milsecond}`;
+    }, 10)
 }
