@@ -29,7 +29,7 @@ table.appendChild(tbody);
 document.getElementById('cont').appendChild(table);
 
 let colomn = check();
-if (colomn == 0) {
+if (colomn == 0 || colomn == 1) {
     colomn = 2;
 }
 if (colomn > 50) {
