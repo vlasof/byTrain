@@ -1,3 +1,4 @@
+
 let id = 'colomnum0';
 let idLine = '';
 let changeIdcheck = 0;
@@ -11,7 +12,7 @@ let totalCell = 0;//всего клеток
 let amountBoombCell = 0;//количество бомб
 let amountOpenCell = 0;//количество открытых клеток
 
-let check = () => {
+let hui = () => {
     let num = 0;
     do {
         num = +prompt(`ENTER NUMBER`, 5);
@@ -26,11 +27,6 @@ let myCord = (colomn) => {
     return cord;
 }
 
-// функция для клика
-
-let kaif = () => {
-    alert(`kaif`);
-}
 // создание тегов table thead tbody
 // связывание тегов с body 
 
@@ -41,7 +37,7 @@ table.appendChild(tbody);
 
 document.getElementById('cont').appendChild(table);
 
-let colomn = check();
+let colomn = hui();
 if (colomn == 0 || colomn == 1) {
     colomn = 2;
 }
@@ -61,8 +57,9 @@ for (let c = 0; c < colomn; c++){
         // создание td (строчек таблицы), добавление к ним id и текста через innerHTML
         let row_child = document.createElement('td');
         row_child.id = `line${c}${l}`;
-        //row_child.innerHTML = c + l;
-        row_child.onclick = kaif; // по нажатию вызывается функция
+        row_child.innerHTML = `*`;
+        row_child.onclick = eventClick; // по нажатию вызывается функция
+        row_child.style.cssText = 'font-size: 50px';
         row_child.style.cssText = `width: ${myCord(colomn) * 6}px; height: ${myCord(colomn) * 6}px;`
         row.appendChild(row_child); // связывание столбца со строкой
     }
