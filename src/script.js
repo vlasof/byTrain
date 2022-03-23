@@ -1,3 +1,16 @@
+let id = 'colomnum0';
+let idLine = '';
+let changeIdcheck = 0;
+
+let matrixLineId = [];
+let matrixId = [];
+let matrixNumber = [];
+let randomNumberLine = [];
+
+let totalCell = 0;//всего клеток
+let amountBoombCell = 0;//количество бомб
+let amountOpenCell = 0;//количество открытых клеток
+
 let check = () => {
     let num = 0;
     do {
@@ -59,3 +72,19 @@ for (let c = 0; c < colomn; c++){
 //table.style.cssText = `width: ${countY}px; height: ${countX}px;`;
 table.className.cssText = `.table`
 
+for (let i = 0; i < colomn; i++) {
+    idLine = document.getElementById(id);
+    selection();
+    id = changeId(id);
+}
+
+console.log(matrixId);
+
+matrixNumberBoxDraw();
+
+//рисовка в косоле (можно удалить)
+for (let h = 0; h < matrixNumber.length; h++) {
+    console.log(...matrixNumber[h]);
+}
+console.log(matrixNumber.length);
+console.log(matrixNumber);
