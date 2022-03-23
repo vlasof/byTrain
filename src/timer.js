@@ -55,5 +55,5 @@ let timer = () => {
         } else {
             clearInterval(timerId);
         }
-    }, 10)
+    }, 20)
 }
