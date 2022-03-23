@@ -2,7 +2,7 @@ function matrixNumberBoxDraw() {
 
     for (let i = 0; i < matrixNumber.length; i++) {
 
-        for (let j = 0; j < (matrixNumber.length); j++) {
+        for (let j = 0; j < (matrixNumber[i].length); j++) {
 
             if (matrixNumber[i][j] == 'e') matrixNumber[i][j] = nubmerBox(i, j);
 

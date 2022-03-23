@@ -6,7 +6,7 @@ function selection() {
         
         matrixLineId.push(idLine.childNodes[i].id);
         randomNumber = random();
-        if (randomNumber < 10) haveBoomb(i);
+        if (randomNumber < 5) haveBoomb(i);
         else notBoomb(i);
     
     }
@@ -26,6 +26,7 @@ function selection() {
 function haveBoomb(i) {
 
     idLine.childNodes[i].boomb = 'boomb';
+    amountBoombCell++;
     return randomNumberLine.push('b');
 
 }
