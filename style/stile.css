@@ -114,4 +114,6 @@ body {
     background-color: var(--back);
     min-height: 1px;
     min-width: 1px;
+    box-shadow: inset 0px 0px 5px;
+    font-size: 3vw;
 }
