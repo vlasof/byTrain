@@ -2,7 +2,7 @@ const table = document.createElement('table');
 table.className = `table`;
 const tbody = document.createElement('tbody');
 table.appendChild(tbody);
-document.getElementById(`container`).appendChild(table);
+document.getElementById(`tableborder`).appendChild(table);
 
 let colomn = +prompt(`enter number`, 10);
 
