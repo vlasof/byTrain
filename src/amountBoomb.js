@@ -49,4 +49,3 @@ function nubmerBox(i, j) {
     return sum;
 
 }
-

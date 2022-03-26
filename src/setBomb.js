@@ -1,13 +1,30 @@
+function startSetBox(elementId) {
+    for (let i = 0; i < colomn; i++) {
+        idLine = document.getElementById(id);
+        selection(elementId);
+    id = changeId(id);
+    }
+
+    matrixNumberBoxDraw();
+
+    // return eventClick;
+}
+
 //определение: бомба или пусто
-function selection() {
+function selection(elementId) {
     let randomNumber;
-    
+
     for (let i = 0; i < idLine.childNodes.length; i++) {
         
-        matrixLineId.push(idLine.childNodes[i].id);
-        randomNumber = random();
-        if (randomNumber < 5) haveBoomb(i);
-        else notBoomb(i);
+        if (elementId.id == idLine.childNodes[i].id) {
+            matrixLineId.push(idLine.childNodes[i].id);
+            notBoomb(i);
+        } else {
+            matrixLineId.push(idLine.childNodes[i].id);
+            randomNumber = random();
+            if (randomNumber < 10) haveBoomb(i);
+            else notBoomb(i);
+        }
     
     }
 
