@@ -1,13 +1,7 @@
 let con = (colomn, diver) => {
-    diver.className = `rep `
-    if (colomn > 50 || colomn < 0) {
-    } else if (colomn > 30) {
-        diver.className += `barz-3`;
-    } else if (colomn > 19) {
-        diver.className += `barz-2`;
-    } else if (colomn > 0) {
-        diver.className += `barz`;
-    }
+    const wid = 100;
+    let size = wid / colomn;
+    diver.style.cssText = `width: ${size}%; height: ${size}%;`;
     return diver;
 }
 
@@ -23,12 +17,12 @@ for (let i = 0; i < colomn; i++) {
     const row = document.createElement(`tr`);
     row.id = `colomn${i}`;
     for (let j = 0; j < colomn; j++) {
-        const row_child = document.createElement(`td`);
+        const row_childWRT = document.createElement(`td`);
+        const row_child = con(colomn, row_childWRT);
         row_child.id = `line${i}${j}`;
-        //row_child.innerHTML = `+`;
         row.appendChild(row_child);
-        const diver = document.createElement(`div`);
-        const divm = con(colomn, diver);
+        const divm = document.createElement(`div`);
+        divm.className = `barz`;
         divm.id = `barz${i}${j}`;
         divm.innerHTML = `+`;
         row_child.appendChild(divm);
