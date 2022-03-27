@@ -17,6 +17,7 @@
     height: 100%;
     border: 1px solid greenyellow;
     margin: 0 auto;
+    table-layout: fixed;
 }
 
 .rep {
@@ -27,6 +28,7 @@
     width: 100%;
     text-align: center;
     margin: 0%;
+    border: 1px solid teal;
 }
 
 tbody {
@@ -35,6 +37,10 @@ tbody {
 
 .table tr {
     width: 100%;
+}
+
+.table td {
+    border: 1px solid lightcoral;
 }
 
 @media (max-width: 1150px) {

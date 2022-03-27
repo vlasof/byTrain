@@ -22,7 +22,13 @@ for (let i = 0; i < colomn; i++) {
     for (let j = 0; j < colomn; j++) {
         const block = document.createElement(`div`);
         block.className = `block`;
+        block.id = `line${i}${j}`;
         block.style.cssText = `width: ${con(colomn)}%; height: auto;`;
+        const text = document.createElement(`div`);
+        text.className = `text`;
+        text.id = `text${i}${j}`;
+        text.innerHTML = `*`;
+        block.appendChild(text);
         line.appendChild(block);
     }
     tbody.appendChild(line);
