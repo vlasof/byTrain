@@ -2,10 +2,9 @@
 let check = 0;
 function eventClick() {
     let elementId = document.getElementById(this.id);
-
+    
     if (check == 0) startSetBox(elementId);
-    check++;
-
+    
     for (let i = 0; i < matrixId.length; i++) {
 
         for (let j = 0; j < matrixId[i].length; j++) {
@@ -17,8 +16,10 @@ function eventClick() {
         }
 
     }
-
     win();
+    console.log(matrixTable);
+    if (check == 0) bombCount.innerHTML = amountBoombCell;
+    check++;
 }
 
 function win() {
@@ -33,7 +34,7 @@ function win() {
 
                 if (matrixNumber[i][j] == 'b') {
 
-                    claster = document.getElementById(`line${i}${j}`);
+                    claster = document.getElementById(`line${i}:${j}`);
                     claster.innerHTML = `*`;
                     matrixNumber[i][j] = '&';
                 }
@@ -46,71 +47,78 @@ function win() {
 function checkEmptyBox(i, j) {
 
     if (matrixNumber[i][j] == 'b') {
+        buttoncount = 1;
         for (let i = 0; i < matrixId.length; i++) {
             
             for (let j = 0; j < matrixId[i].length; j++) {
                 
                 if (matrixNumber[i][j] == 'b') {
-
-                    claster = document.getElementById(`line${i}${j}`);
+                    
+                    claster = document.getElementById(`line${i}:${j}`);
                     claster.innerHTML = `*`;
                     matrixNumber[i][j] = '&';
+                    matrixTable[i][j].banSet = false;
                 }
             }
         }
     }
     
     if (matrixNumber[i][j] == 0) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `0`;
         matrixNumber[i][j] = '*';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 1) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `1`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 2) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `2`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 3) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `3`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 4) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `4`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
 
     if (matrixNumber[i][j] == 5) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `5`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
 
     if (matrixNumber[i][j] == 6) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `6`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
-
-        
+        matrixTable[i][j].banSet = false;
     }
-    around(i, j);
+    if (matrixNumber[i][j] !== '|') around(i, j);
 }
 
 function around(i, j) {
@@ -160,45 +168,135 @@ function around(i, j) {
 function setNumberAround(i, j) {
 
     if (matrixNumber[i][j] == 1) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `1`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 2) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `2`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 3) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `3`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
     
     if (matrixNumber[i][j] == 4) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `4`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
 
     if (matrixNumber[i][j] == 5) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `5`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
 
     if (matrixNumber[i][j] == 6) {
-        claster = document.getElementById(`line${i}${j}`);
+        claster = document.getElementById(`line${i}:${j}`);
         claster.innerHTML = `6`;
         matrixNumber[i][j] = '&';
         amountOpenCell++;
+        matrixTable[i][j].banSet = false;
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+function eventClickRight() {
+
+    let elementId = document.getElementById(this.id);
+
+    for (let i = 0; i < matrixId.length; i++) {
+
+        for (let j = 0; j < matrixId[i].length; j++) {
+
+            if (elementId.id == matrixId[i][j]) {
+                flag(i, j, elementId);
+            }
+            
+        }
+
+    }
+    return false;
+}
+
+let bombCount = document.getElementById('bombCount');
+function flag(i, j, elementId) {
+
+    if (matrixTable[i][j].banSet == true) {
+        if (matrixNumber[i][j] == '|') {
+
+            if (elementId.value == 'b') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = 'b';
+            }
+
+            if (elementId.value == '0') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '0';
+            }
+
+            if (elementId.value == '1') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '1';
+            }
+
+            if (elementId.value == '2') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '2';
+            }
+
+            if (elementId.value == '3') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '3';
+            }
+
+            if (elementId.value == '4') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '4';
+            }
+
+            if (elementId.value == '5') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '5';
+            }
+
+            if (elementId.value == '6') {
+                elementId.innerHTML = ``;
+                matrixNumber[i][j] = '6';
+            }
+            bombValue++;
+            bombCount.innerHTML = bombValue;
+        } else {
+            elementId.innerHTML = `🚩`;
+            matrixNumber[i][j] = '|';
+            bombValue--;
+            bombCount.innerHTML = bombValue;
+        }
+    }
 }

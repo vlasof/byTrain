@@ -2,7 +2,9 @@ let id = 'colomnum0';
 let idLine = '';
 let changeIdcheck = 0;
 
-let matrixLineId = [];
+let matrixTable = [];
+
+
 let matrixId = [];
 let matrixNumber = [];
 let randomNumberLine = [];
@@ -10,11 +12,12 @@ let randomNumberLine = [];
 let totalCell = 0;//всего клеток
 let amountBoombCell = 0;//количество бомб
 let amountOpenCell = 0;//количество открытых клеток
+let bombValue;
 
 let inputUser = () => {
     let num = 0;
     do {
-        num = +prompt(`ENTER NUMBER`, 10);
+        num = +prompt(`ENTER NUMBER`, 20);
     } while (num == NaN)
     totalCell = num * num;
     return num;
@@ -57,9 +60,11 @@ for (let c = 0; c < colomn; c++) {
         countX += 25;
         // создание td (строчек таблицы), добавление к ним id и текста через innerHTML
         let row_child = document.createElement('td');
-        row_child.id = `line${c}${l}`;
+        row_child.id = `line${c}:${l}`;
         row_child.innerHTML = ``;
         row_child.onclick = eventClick; // по нажатию вызывается функция
+        row_child.oncontextmenu = eventClickRight; // по нажатию вызывается функция
+        row_child.style = 'cursor: pointer';
         row_child.style.cssText = 'font-size: 50px';
         row_child.style.cssText = `width: ${myCord(colomn) * 6}px; height: ${myCord(colomn) * 6}px;`
         row.appendChild(row_child); // связывание столбца со строкой
@@ -67,3 +72,4 @@ for (let c = 0; c < colomn; c++) {
     tbody.appendChild(row); // связывание тега table со столбцок который выше привязали строки 
 }
 table.className.cssText = `.table`;
+
