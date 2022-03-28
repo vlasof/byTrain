@@ -1,6 +1,9 @@
 let con = (colomn) => {
     const wid = 100;
     let size = wid / colomn;
+    if (colomn > 30) {
+        size = 0.5;
+    }
     return size;
 }
 

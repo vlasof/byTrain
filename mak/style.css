@@ -1,5 +1,6 @@
 body {
     align-items: center;
+    background-color: antiquewhite;
 }
 
 .mainwindow {
@@ -7,6 +8,7 @@ body {
     width: 1600px;
     height: 100%;
     border: 1px solid black;
+    background-color: #284A7E;
     padding: 5%;
     display: flex;
     flex-direction: row;
@@ -16,49 +18,86 @@ body {
 .tablecontainer {
     width: 700px;
     height: 700px;
-    border: 1px solid green;
+    border: 5px solid #10c4d1;
+    border-radius: 10px;
 }
 
 .menucont {
-    padding: 15px;
     width: 700px;
-    height: 700px;
-    border: 1px solid greenyellow;
+    height: 710px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .timerandcount {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    border: 5px solid #10c4d1;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .timerbox {
     width: 70%;
-    height: 50px;
-    border: 1px solid orange;
+    height: 120px;
     background-color: black;
+    border: 1px solid orange;
+    border-radius: 4px;
+    margin: 10px;
+    color: azure;
+    text-align: center;
 }
 
 .count {
     width: 30%;
-    height: 50px;
+    height: 120px;
     border: 1px solid orange;
     background-color: black;
+    border-radius: 4px;
+    margin: 10px;
+    color: azure;
+    text-align: center;
 }
 
 .mainmenu {
     width: 100%;
     height: 70%;
-    border: 1px solid yellow;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .firstcolumn {
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 5px solid #10c4d1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.filcolomn {
+    border: 5px solid #10c4d1;
+    border-radius: 10px;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.frcolumn {
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexcolumn {
+    width: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -68,7 +107,8 @@ body {
     width: 100%;
     height: 65%;
     background-color: blue;
-    border: 1px solid black;
+    border: 5px solid #10c4d1;
+    border-radius: 10px;
 }
 
 .colorswitch {
@@ -76,4 +116,24 @@ body {
     height: 25%;
     border: 1px solid aqua;
     background-color: aqua;
+    border-radius: 10px;
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+    background-color: blueviolet;
+    font-size: 25px;
+    border-bottom: 5px solid #10c4d1;
+    border-radius: 5px 5px 0 0;
+    margin: 0 auto;
+}
+
+.buttonsdif {
+    padding: 20px;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    border: 3px solid #10c4d1;
+    border-radius: 10px;
 }
