@@ -43,6 +43,7 @@ body {
     border: 1px solid #10c4d1;
     border-radius: 3px;
     background: #9d77f5;
+    font-family: 'Red Hat Mono', monospace;
 }
 
 .tablebody {
@@ -82,7 +83,7 @@ body {
     width: 70%;
     height: 120px;
     background-color: black;
-    border: 1px solid orange;
+    border: 5px solid orange;
     border-radius: 4px;
     margin: 10px;
     color: azure;
@@ -93,12 +94,14 @@ body {
 
 .timer {
     text-align: center;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 50px;
 }
 
 .count {
     width: 30%;
     height: 120px;
-    border: 1px solid orange;
+    border: 5px solid orange;
     background-color: black;
     border-radius: 4px;
     margin: 10px;
@@ -152,7 +155,7 @@ body {
 
 .topplayer {
     height: 65%;
-    background-color: blue;
+    background-color: #9d77f5;
     border: 5px solid #10c4d1;
     border-radius: 10px;
 }
@@ -172,6 +175,7 @@ body {
     border-bottom: 5px solid #10c4d1;
     border-radius: 5px 5px 0 0;
     margin: 0 auto;
+    font-family: 'Red Hat Mono', monospace;
 }
 
 .buttonsdif {
@@ -182,4 +186,6 @@ body {
     height: auto;
     border: 3px solid #10c4d1;
     border-radius: 10px;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 15px;
 }
