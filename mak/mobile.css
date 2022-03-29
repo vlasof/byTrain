@@ -14,6 +14,19 @@
         height: 600px;
     }
 
+    .tableborder {
+        margin: 0 auto;
+    }
+
+    .block {
+        padding: 5px;
+    }
+
+    .table {
+        width: 600px;
+        height: 600px;
+    }
+
     .menucont {
         margin: 5px;
         width: 610px;
