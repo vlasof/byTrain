@@ -97,6 +97,7 @@ body {
     height: auto;
     border: 2px solid var(--borderocean);
     border-radius: 7px;
+    box-shadow: 0px 0px 50px rgb(63, 42, 255), inset 0px 0px 50px rgb(63, 42, 255);
 }
 
 .table {
@@ -114,4 +115,6 @@ body {
     background-color: var(--back);
     min-height: 1px;
     min-width: 1px;
+    box-shadow: inset 0px 0px 5px;
+    font-size: 3vw;
 }
