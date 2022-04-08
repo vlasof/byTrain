@@ -1,11 +1,12 @@
 function matrixNumberBoxDraw() {
-
+    
     for (let i = 0; i < matrixNumber.length; i++) {
-
+        
         for (let j = 0; j < (matrixNumber[i].length); j++) {
-
+            
             if (matrixNumber[i][j] == 'e') matrixNumber[i][j] = nubmerBox(i, j);
-
+            else matrixTable[i][j].value = 'b';
+            
         }
     }
 
@@ -45,8 +46,8 @@ function nubmerBox(i, j) {
     if (j !== 0 && i !== 0) {
         if (matrixNumber[i - 1][j - 1] == 'b') sum++;
     }
-    
+
+    matrixTable[i][j].value = sum;
     return sum;
 
 }
-
